@@ -6,10 +6,26 @@
     <meta name="author" content="GOLOB Nicolas, I am currently studying Web Development">
     <title>Weather-App</title>
     <meta name="description" content="mini weather application created for practice">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="app.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="app-container">
+        <header>
+            <input type="text" class="search" placeholder="City Weather Research" autocomplete="off"/>
+        </header>
+        <main>
+            <section class="location">
+                <div class="city">Albertville, FR</div>
+                <div class="date">Saturday 1 May 2021</div>
+            </section>
+            <div class="current temperature">
+                <div class="temp">13<span>°c</span></div>
+                <div class="weather">raining</div>
+                <div class="hi-low">11/14°c</div>
+            </div>
+        </main>
+    </div>
     <script type="javascript" src="app.js"></script>
 </body>
 </html>
