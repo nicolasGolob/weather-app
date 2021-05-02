@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
     background-image: url('./image/forest.jpg');
     background-size: cover;
     background-position:top center;
@@ -45,4 +45,39 @@ main{
     text-align: center;
     flex-direction: column;
     font-weight: bold;
+}
+
+.location .city{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.location .date{
+    color: white;
+    font-size: 15px;
+}
+
+.current .temperature{
+    color:white;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    margin:16px 0;
+}
+
+.current .weather{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.current .hi-low{
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px black;
 }
