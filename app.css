@@ -12,13 +12,14 @@ body{
 }
 
 .app-container{
+    max-height:80vh;
     display: flex;
     flex-direction: column;
-    max-height:80vh;
 }
+
 header{
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     padding:60px 23px 23px;
 }

@@ -1,0 +1,28 @@
+
+//src API -> https://openweathermap.org/current
+
+const api = {
+    key:"",
+    base:"https://api.openweathermap.org/data/2.5/"
+}
+
+const searchByCity = document.querySelector('.searchByCity');
+searchByCity.addEventListener('keypress', setQuery);
+
+function setQuery(event){
+    if(event.keyCode == 13){
+        getWeatherData(searchByCity.value)
+    }
+}
+
+function getWeatherData(query){
+    fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
+    .then(weather =>{
+        return weather.json();
+    }).then(displayWeatherData);
+}
+
+function displayWeatherData(weather){
+    console.log(weather);
+}
+
