@@ -1,4 +1,3 @@
-
 //src API -> https://openweathermap.org/current
 
 const api = {
@@ -24,5 +23,8 @@ function getWeatherData(query){
 
 function displayWeatherData(weather){
     console.log(weather);
+    let city = document.querySelector('.location .city');
+    city.innerText=`${weather.name}, ${weather.sys.country}`;
+    // src:openweathmap : sys -> Internal parameter -> country code 
 }
 
