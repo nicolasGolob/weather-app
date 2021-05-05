@@ -3,6 +3,7 @@
 
 const api = {
     key:"    ",
+    //attention à ne pas laisser la clef durant l'envoie
     base:"https://api.openweathermap.org/data/2.5/"
 }
 
@@ -30,5 +31,17 @@ function displayWeatherData(weather){
     let temperature  = document.querySelector('.current .temperature');
     temperature.innerText=`${Math.round(weather.main.temp)}`;
     //math round obviously to round the resulting measurement 
+    let date = document.querySelector('.location.date');
+    date.innerText=buildingDate(now);
+
+    function buildingDate(dateArg){
+        let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let day = days[dateArg.getDay()];
+        let date = dateArg.getDay();
+        let month = months[dateArg.getMouth()];
+        let year = dateArg.getYear();
+        return`${day} ${date} ${month} ${year}`
+    }
 }
 
