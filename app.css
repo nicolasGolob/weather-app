@@ -24,7 +24,7 @@ header{
     padding:60px 23px 23px;
 }
 
-header input{
+input{
     max-width: 350px;
     padding:10px 15px;
     outline: none;
@@ -48,35 +48,33 @@ main{
     font-weight: bold;
 }
 
-.location .city{
+.city{
     color: white;
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 4px;
 }
 
-.location .date{
+.date{
     color: white;
     font-size: 15px;
 }
 
-.current .temperature{
+.temperature{
     color:white;
     font-size: 100px;
     font-weight: bold;
     text-shadow: 2px 2px 2px black;
-    margin:16px 0;
+    margin:10px 0;
 }
 
-.current .weather{
+.weather-icon{
     color: white;
-    font-size: 30px;
-    font-weight: 600;
+    width: 65%;
     margin-bottom: 15px;
-    text-shadow: 1px 1px 1px black;
 }
 
-.current .hi-low{
+.lowest .highest{
     color: white;
     font-size: 22px;
     font-weight: 500;
