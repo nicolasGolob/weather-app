@@ -2,11 +2,11 @@
 //src API -> https://openweathermap.org/current
 
 const api = {
-    key:"    ",
+    key:"",
     base:"https://api.openweathermap.org/data/2.5/"
 }
 
-const searchByCity = document.getElementById('searchByCity');
+const searchByCity = document.querySelector('.searchByCity');
 searchByCity.addEventListener('keypress', setQuery);
 
 function setQuery(event){
@@ -14,6 +14,7 @@ function setQuery(event){
         getWeatherData(searchByCity.value)
     }
 }
+
 
 function getWeatherData(query){
     window.fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
@@ -28,25 +29,19 @@ function getWeatherData(query){
 
 function displayWeatherData(weathers){
     console.log(weathers);
-    let city = document.querySelector('.location .city');
-    city.innerText=`${weathers.name}, ${weathers.sys.country}`;
-    // src:openweathmap : sys -> Internal parameter -> country code 
-    let now = new Date();
-    let date = document.querySelector('.location .date');
-    date.innerText=buildingDate(now);
-
-    let temperature  = document.querySelector('.current .temperature');
-    temperature.innerText=`${Math.round(weathers.main.temp)}`;
-    //math round obviously to round the resulting measurement 
-    
     let weatherElement = weathers.weather[0].icon;
     $('.weather-icon').attr('src', 'http://openweathermap.org/img/wn/'+ weatherElement +'.png')
+    //create this event cause pb with the display visibility
+    const showElement = document.getElementById('showElement');
+    showElement.addEventListener('keyup', () => {
+    const showIcon = document.getElementById('showIcon');
+    showIcon.style.visibility = 'visible';
+});
 
-    let lowestTemp = document.querySelector('.current .lowest');
-    lowestTemp.innerText = `Min : ${weathers.main.temp_min}°c`;
-
-    let highestTemp = document.querySelector('.current .highest');
-    highestTemp.innerText = `Max : ${weathers.main.temp_max}°c`;
+    // src:openweathmap : sys -> Internal parameter -> country code 
+    let now = new Date();
+    let date = document.querySelector('.current-weather .date');
+    date.innerText=buildingDate(now);
 
     function buildingDate(dateArg){
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -55,7 +50,24 @@ function displayWeatherData(weathers){
         let date = dateArg.getDate();
         let month = months[dateArg.getMonth()];
         let year = dateArg.getFullYear();
-        return`${day} ${date} ${month} ${year}`
+        return`Hi, we are the ${day} ${date} ${month} ${year}, it's currently`
     }
+
+    let temperature  = document.querySelector('.current-temperature');
+    temperature.innerText=`${Math.round(weathers.main.temp)}°`;
+    // //math round obviously to round the resulting measurement 
+
+    let city = document.querySelector('.city');
+    city.innerText=`In the town of ${weathers.name}, ${weathers.sys.country}`;
+    
+    
+
+    // let lowestTemp = document.querySelector('.current .lowest');
+    // lowestTemp.innerText = `Min : ${weathers.main.temp_min}°c`;
+
+    // let highestTemp = document.querySelector('.current .highest');
+    // highestTemp.innerText = `Max : ${weathers.main.temp_max}°c`;
+
+  
 }
 

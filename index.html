@@ -7,25 +7,24 @@
     <title>Weather-App</title>
     <meta name="description" content="mini weather application created for practice">
     <link rel="stylesheet" href="app.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="app-container">
-        <header>
-            <input type="text" id="searchByCity" placeholder="City Weather Research" autocomplete="off"/>
-        </header>
-        <main>
-            <section class="location">
-                <div class="city">Albertville, FR</div>
-                <div class="date">Monday 10 May 2021</div>
-            </section>
-            <div class="current">
-                <div class="temperature">13<span>°c</span></div>
-                    <img class="weather-icon" src="" alt=""/>
-                <div class="lowest">Min : 11°c</div>
-                <div class="highest">Max : 14°c</div>
-            </div>
-        </main>
+                <div class="quote-text">
+                    <p>"In the presence of nature, a wild delight <br/> runs through the man, in spite of real sorrows." <br/>
+                        <span>Ralph Waldo Emerson</span></p>
+                </div>
+
+                <div class="current-weather"> 
+                    <img class="weather-icon" id="showIcon" style="visibility:hidden"/>
+                    <div class="date"></div>
+                 </div>
+
+                <div class="current-temperature"></div>
+                <div class="city"></div>
+
+                <input type="text" class="searchByCity" id="showElement" placeholder="City Weather Research" autocomplete="off"/>
     </div>
     <script src="app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
