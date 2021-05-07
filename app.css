@@ -21,7 +21,7 @@ header{
     display: flex;
     align-content: center;
     justify-content: center;
-    padding:60px 23px 23px;
+    padding:190px 23px 23px;
 }
 
 input{
@@ -74,7 +74,7 @@ main{
     margin-bottom: 15px;
 }
 
-.lowest .highest{
+.lowest, .highest{
     color: white;
     font-size: 22px;
     font-weight: 500;
