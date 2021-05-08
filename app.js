@@ -2,7 +2,7 @@
 //src API -> https://openweathermap.org/current
 
 const api = {
-    key:"",
+    key:"3b87070e3fb9631a04b2fd9c77bf2f6a    ",
     base:"https://api.openweathermap.org/data/2.5/"
 }
 
@@ -14,7 +14,6 @@ function setQuery(event){
         getWeatherData(searchByCity.value)
     }
 }
-
 
 function getWeatherData(query){
     window.fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
@@ -31,7 +30,7 @@ function displayWeatherData(weathers){
     console.log(weathers);
     let weatherElement = weathers.weather[0].icon;
     $('.weather-icon').attr('src', 'http://openweathermap.org/img/wn/'+ weatherElement +'.png')
-    //create this event cause pb with the display visibility
+    //create this event cause pb with the display
     const showElement = document.getElementById('showElement');
     showElement.addEventListener('keyup', () => {
     const showIcon = document.getElementById('showIcon');

@@ -100,4 +100,27 @@ input:focus{
     letter-spacing: 2px;
 } 
 
+.showDetails{
+    grid-column: 9/-1;
+    grid-row:10/-1;
+    width: 65%;
+    height:33px;
+    outline: none;
+    border:none;
+    border-radius: 12px;
+    color: black;
+    background-color: rgba(231, 231, 231, 0.8);
+    font-weight: 400;
+    font-size: 23px;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas {
+    color:black;
+    font-size: 23px;
+} 
+
 
