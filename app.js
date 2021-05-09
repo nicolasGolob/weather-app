@@ -2,7 +2,7 @@
 //src API -> https://openweathermap.org/current
 
 const api = {
-    key:"3b87070e3fb9631a04b2fd9c77bf2f6a    ",
+    key:"    ",
     base:"https://api.openweathermap.org/data/2.5/"
 }
 
