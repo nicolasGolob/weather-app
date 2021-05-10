@@ -58,15 +58,24 @@ function displayWeatherData(weathers){
 
     let city = document.querySelector('.city');
     city.innerText=`In the town of ${weathers.name}, ${weathers.sys.country}`;
+
+    let weatherDescription = document.querySelector('.weather-description');
+    weatherDescription.innerText=`Weather Describe : ${weathers.weather[0].main}`;
+
+    let weatherMin= document.querySelector('.weather-min');
+    weatherMin.innerText=`Minimal : ${weathers.main.temp_min}°c`;
+
+    let weatherMax= document.querySelector('.weather-max');
+    weatherMax.innerText=`Maximal  : ${weathers.main.temp_max}°c`;
+
+    let weatherHumidity = document.querySelector('.weather-humidity');
+    weatherHumidity.innerText=`Humidty : ${weathers.main.humidity}%`;
     
-    
+    let weatherSpeed = document.querySelector('.wind-speed');
+    weatherSpeed.innerText= `Speed : ${weathers.wind.speed} metre per second`;
 
-    // let lowestTemp = document.querySelector('.current .lowest');
-    // lowestTemp.innerText = `Min : ${weathers.main.temp_min}°c`;
-
-    // let highestTemp = document.querySelector('.current .highest');
-    // highestTemp.innerText = `Max : ${weathers.main.temp_max}°c`;
-
-  
-}
+    let weatherCloud = document.querySelector('.weather-cloud');
+    weatherCloud.innerText= `Cloud : ${weathers.clouds.all}%`;
+    s
+};
 
