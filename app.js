@@ -49,7 +49,7 @@ function displayWeatherData(weathers){
         let date = dateArg.getDate();
         let month = months[dateArg.getMonth()];
         let year = dateArg.getFullYear();
-        return`Hi, we are the ${day} ${date} ${month} ${year}, it's currently`
+        return`Hi, we are ${day} ${date} ${month} ${year}, it's currently`
     }
 
     let temperature  = document.querySelector('.current-temperature');
@@ -57,10 +57,10 @@ function displayWeatherData(weathers){
     // //math round obviously to round the resulting measurement 
 
     let city = document.querySelector('.city');
-    city.innerText=`In the town of ${weathers.name}, ${weathers.sys.country}`;
+    city.innerText=`In the city of ${weathers.name}, ${weathers.sys.country}`;
 
     //******************* Details Part  ************************************/
-
+    
     let weatherDescription = document.querySelector('.weather-description');
     weatherDescription.innerHTML=`<i class="fas fa-cloud-meatball"></i> &nbsp Weather Describe : ${weathers.weather[0].main}`;
 
@@ -71,7 +71,7 @@ function displayWeatherData(weathers){
     weatherMax.innerHTML=`<i class="fas fa-temperature-high"></i> &nbsp Maximal  : ${weathers.main.temp_max}°c`;
     
     let weatherSpeed = document.querySelector('.wind-speed');
-    weatherSpeed.innerHTML= `<i class="fas fa-wind"></i> &nbsp Weather Speed : ${weathers.wind.speed} metre per second`;
+    weatherSpeed.innerHTML= `<i class="fas fa-wind"></i> &nbspSpeed : ${weathers.wind.speed} metre per second`;
 
     let weatherCloud = document.querySelector('.weather-cloud');
     weatherCloud.innerHTML= `<i class="fas fa-cloud"></i> &nbsp Cloud : ${weathers.clouds.all}%`;

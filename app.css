@@ -123,6 +123,88 @@ input:focus{
     font-size: 23px;
 } 
 
+@media screen and (max-width : 900px){
+    
+    .app-container{
+        padding:10px;
+    }
+    .quote-text{
+        font-size: 12px;
+    }
+    .quote-text span{
+        align-items:center;
+        justify-content: left;
+        display: flex;
+    }
+    input{
+        font-size: 17px;
+        width:100%;
+        grid-column: 4/8;
+    }
+    .current-weather .date{
+        font-size: 17px;
+    }
+    .current-weather .weather-icon{
+       display: none;
+    }
+    .current-temperature{
+        font-size: 100px;
+    }
+    .city{
+        font-size: 18px ;
+    }
+    .showDetails{
+        grid-column: 8/-1;
+        font-size: 13px;
+        width: 100%;
+        padding: 10px;
+    }
+    .fas{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width : 600px){
+
+    .app-container{
+        padding:10px;
+    }
+    .quote-text{
+        font-size: 12px;
+    }
+    .quote-text span{
+        align-items:center;
+        justify-content: left;
+        display: flex;
+    }
+    input{
+        font-size: 17px;
+        width:100%;
+        grid-column: 4/8;
+    }
+    .current-weather .date{
+        font-size: 17px;
+    }
+    .current-weather .weather-icon{
+       display: none;
+    }
+    .current-temperature{
+        font-size: 100px;
+    }
+    .city{
+        font-size: 18px ;
+    }
+    .showDetails{
+        grid-column: 8/-1;
+        font-size: 13px;
+        width: 100%;
+        padding: 10px;
+    }
+    .fas{
+        font-size: 15px;
+    }
+}
+
 /******************** Details Part **************************/
 
 .details-container{
@@ -204,4 +286,56 @@ input:focus{
     display: flex;
     font-weight: bold;
     font-size: 25px;
+}
+
+@media screen and (max-width : 900px){
+    
+    .details-container{
+        padding:20px;
+    }
+    .weather-description{
+        font-size: 13px;
+    }
+    .weather-max{
+        font-size: 13px;
+    }
+    .weather-min{
+        font-size: 13px;
+    }
+    .wind-speed{
+        font-size: 13px;
+       
+    }
+    .weather-cloud{
+        font-size: 13px;
+    }
+    .weather-humidity{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width : 600px){
+    
+    .details-container{
+        padding:20px;
+    }
+    .weather-description{
+        font-size: 13px;
+    }
+    .weather-max{
+        font-size: 13px;
+    }
+    .weather-min{
+        font-size: 13px;
+    }
+    .wind-speed{
+        font-size: 13px;
+       
+    }
+    .weather-cloud{
+        font-size: 13px;
+    }
+    .weather-humidity{
+        font-size: 13px;
+    }
 }
