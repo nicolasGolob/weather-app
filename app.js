@@ -59,23 +59,25 @@ function displayWeatherData(weathers){
     let city = document.querySelector('.city');
     city.innerText=`In the town of ${weathers.name}, ${weathers.sys.country}`;
 
+    //******************* Details Part  ************************************/
+
     let weatherDescription = document.querySelector('.weather-description');
-    weatherDescription.innerText=`Weather Describe : ${weathers.weather[0].main}`;
+    weatherDescription.innerHTML=`<i class="fas fa-cloud-meatball"></i> &nbsp Weather Describe : ${weathers.weather[0].main}`;
 
     let weatherMin= document.querySelector('.weather-min');
-    weatherMin.innerText=`Minimal : ${weathers.main.temp_min}°c`;
+    weatherMin.innerHTML=`<i class="fas fa-temperature-low"></i> &nbsp Minimal : ${weathers.main.temp_min}°c`;
 
     let weatherMax= document.querySelector('.weather-max');
-    weatherMax.innerText=`Maximal  : ${weathers.main.temp_max}°c`;
-
-    let weatherHumidity = document.querySelector('.weather-humidity');
-    weatherHumidity.innerText=`Humidty : ${weathers.main.humidity}%`;
+    weatherMax.innerHTML=`<i class="fas fa-temperature-high"></i> &nbsp Maximal  : ${weathers.main.temp_max}°c`;
     
     let weatherSpeed = document.querySelector('.wind-speed');
-    weatherSpeed.innerText= `Speed : ${weathers.wind.speed} metre per second`;
+    weatherSpeed.innerHTML= `<i class="fas fa-wind"></i> &nbsp Weather Speed : ${weathers.wind.speed} metre per second`;
 
     let weatherCloud = document.querySelector('.weather-cloud');
-    weatherCloud.innerText= `Cloud : ${weathers.clouds.all}%`;
-    s
+    weatherCloud.innerHTML= `<i class="fas fa-cloud"></i> &nbsp Cloud : ${weathers.clouds.all}%`;
+
+    let weatherHumidity = document.querySelector('.weather-humidity');
+    weatherHumidity.innerHTML=`<i class="fas fa-tint"></i> &nbsp Humdity : ${weathers.main.humidity}%`;
+    
 };
 
