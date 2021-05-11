@@ -116,6 +116,8 @@ input:focus{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
 }
 
 .fas {
@@ -316,7 +318,7 @@ input:focus{
 @media screen and (max-width : 600px){
     
     .details-container{
-        padding:20px;
+        padding:15px;
     }
     .weather-description{
         font-size: 13px;

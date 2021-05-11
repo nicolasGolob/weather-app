@@ -2,7 +2,7 @@
 //src API -> https://openweathermap.org/current
 
 const api = {
-    key:" ",
+    key:"    ",
     base:"https://api.openweathermap.org/data/2.5/"
 }
 
@@ -35,6 +35,10 @@ function displayWeatherData(weathers){
     showElement.addEventListener('keyup', () => {
     const showIcon = document.getElementById('showIcon');
     showIcon.style.visibility = 'visible';
+    const buttonShowDetailsPart = document.getElementById('showDetailsPart')
+    buttonShowDetailsPart.style.visibility='visible';
+    const showDetailsVisible = document.getElementById('showDetailsVisible');
+    showDetailsVisible.style.display = 'inline-grid';
 });
 
     // src:openweathmap : sys -> Internal parameter -> country code 
@@ -60,11 +64,6 @@ function displayWeatherData(weathers){
     city.innerText=`In the city of ${weathers.name}, ${weathers.sys.country}`;
 
     //******************* Details Part  ************************************/
-    const showDetailsPart = document.getElementById('showDetailsPart');
-    showDetailsPart.addEventListener('click', () => {
-    const showDetailsVisible = document.getElementById('showDetailsVisible');
-    showDetailsVisible.style.display = 'inline-grid';});
-
     let weatherDescription = document.querySelector('.weather-description');
     weatherDescription.innerHTML=`<i class="fas fa-cloud-meatball"></i> &nbsp Weather Describe : ${weathers.weather[0].main}`;
 
@@ -82,6 +81,5 @@ function displayWeatherData(weathers){
 
     let weatherHumidity = document.querySelector('.weather-humidity');
     weatherHumidity.innerHTML=`<i class="fas fa-tint"></i> &nbsp Humdity : ${weathers.main.humidity}%`;
-    
 };
 
