@@ -2,7 +2,7 @@
 //src API -> https://openweathermap.org/current
 
 const api = {
-    key:"    ",
+    key:" ",
     base:"https://api.openweathermap.org/data/2.5/"
 }
 
@@ -60,7 +60,11 @@ function displayWeatherData(weathers){
     city.innerText=`In the city of ${weathers.name}, ${weathers.sys.country}`;
 
     //******************* Details Part  ************************************/
-    
+    const showDetailsPart = document.getElementById('showDetailsPart');
+    showDetailsPart.addEventListener('click', () => {
+    const showDetailsVisible = document.getElementById('showDetailsVisible');
+    showDetailsVisible.style.display = 'inline-grid';});
+
     let weatherDescription = document.querySelector('.weather-description');
     weatherDescription.innerHTML=`<i class="fas fa-cloud-meatball"></i> &nbsp Weather Describe : ${weathers.weather[0].main}`;
 
