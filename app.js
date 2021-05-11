@@ -2,7 +2,7 @@
 //src API -> https://openweathermap.org/current
 
 const api = {
-    key:"    ",
+    key:"",
     base:"https://api.openweathermap.org/data/2.5/"
 }
 
@@ -14,7 +14,6 @@ function setQuery(event){
         getWeatherData(searchByCity.value)
     }
 }
-
 function getWeatherData(query){
     window.fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
     .then(weathers =>{
@@ -25,7 +24,6 @@ function getWeatherData(query){
     }).then(displayWeatherData);
     //then -> promise displayWeatherData in order to dispatch and use the data with this function
 }
-
 function displayWeatherData(weathers){
     console.log(weathers);
     let weatherElement = weathers.weather[0].icon;
@@ -39,8 +37,7 @@ function displayWeatherData(weathers){
     buttonShowDetailsPart.style.visibility='visible';
     const showDetailsVisible = document.getElementById('showDetailsVisible');
     showDetailsVisible.style.display = 'inline-grid';
-});
-
+    });
     // src:openweathmap : sys -> Internal parameter -> country code 
     let now = new Date();
     let date = document.querySelector('.current-weather .date');
@@ -80,6 +77,6 @@ function displayWeatherData(weathers){
     weatherCloud.innerHTML= `<i class="fas fa-cloud"></i> &nbsp Cloud : ${weathers.clouds.all}%`;
 
     let weatherHumidity = document.querySelector('.weather-humidity');
-    weatherHumidity.innerHTML=`<i class="fas fa-tint"></i> &nbsp Humdity : ${weathers.main.humidity}%`;
+    weatherHumidity.innerHTML=`<i class="fas fa-tint"></i> &nbsp Humidity : ${weathers.main.humidity}%`;
 };
 
