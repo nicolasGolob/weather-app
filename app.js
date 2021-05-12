@@ -28,7 +28,6 @@ function displayWeatherData(weathers){
     console.log(weathers);
     let weatherElement = weathers.weather[0].icon;
     $('.weather-icon').attr('src', 'http://openweathermap.org/img/wn/'+ weatherElement +'.png')
-    //create this event cause pb with the display
     const showElement = document.getElementById('showElement');
     showElement.addEventListener('keyup', () => {
     const showIcon = document.getElementById('showIcon');
@@ -37,7 +36,7 @@ function displayWeatherData(weathers){
     buttonShowDetailsPart.style.visibility='visible';
     const showDetailsVisible = document.getElementById('showDetailsVisible');
     showDetailsVisible.style.display = 'inline-grid';
-    });
+});
     // src:openweathmap : sys -> Internal parameter -> country code 
     let now = new Date();
     let date = document.querySelector('.current-weather .date');
@@ -50,7 +49,7 @@ function displayWeatherData(weathers){
         let date = dateArg.getDate();
         let month = months[dateArg.getMonth()];
         let year = dateArg.getFullYear();
-        return`Hi, we are ${day} ${date} ${month} ${year}, it's currently`
+        return`Hi, it is ${day} ${date} ${month} ${year}, it's currently`
     }
 
     let temperature  = document.querySelector('.current-temperature');
@@ -62,7 +61,7 @@ function displayWeatherData(weathers){
 
     //******************* Details Part  ************************************/
     let weatherDescription = document.querySelector('.weather-description');
-    weatherDescription.innerHTML=`<i class="fas fa-cloud-meatball"></i> &nbsp Weather Describe : ${weathers.weather[0].main}`;
+    weatherDescription.innerHTML=`<i class="fas fa-cloud-meatball"></i> &nbsp Weather Description : ${weathers.weather[0].main}`;
 
     let weatherMin= document.querySelector('.weather-min');
     weatherMin.innerHTML=`<i class="fas fa-temperature-low"></i> &nbsp Minimal : ${weathers.main.temp_min}°c`;
