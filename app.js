@@ -1,10 +1,6 @@
-
 //src API -> https://openweathermap.org/current
-
-const api = {
-    key:"",
-    base:"https://api.openweathermap.org/data/2.5/"
-}
+const key = API.key;
+const base = API.base;
 
 const searchByCity = document.querySelector('.searchByCity');
 searchByCity.addEventListener('keypress', setQuery);
@@ -15,7 +11,7 @@ function setQuery(event){
     }
 }
 function getWeatherData(query){
-    window.fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
+    window.fetch(`${base}weather?q=${query}&units=metric&appid=${key}`)
     .then(weathers =>{
     //once you've got the api back you take what it sent back to you
     //-> weathers = the name of the object given to it -> corresponds to a large object that the api sends back to us
